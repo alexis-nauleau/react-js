@@ -43,7 +43,7 @@ const array = [1, 2, 3, 4,10];
 //
 
 const sum = array.reduce(
-  (accumulator, currentValue) => accumulator + currentValue,
+  (add, val) => add + val,
   
 );
 
