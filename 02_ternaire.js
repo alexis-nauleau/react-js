@@ -6,10 +6,10 @@
  *    - utiliser l'opérateur ternaire (if interdit)
  */
 function ternaire(a , b) {
-    return (a>b)? "x est plus grand":"y est plus grand";
+    return (a>b)? a:b;
 }
 
-console.log(ternaire(50, 2));
+console.log(ternaire(1, 2));
 
 
 

@@ -10,7 +10,9 @@
  * 
   */
 
-const multiplyByTwo = (array) => {}
+const multiplyByTwo = [1,2,3,4];
+const mapping = multiplyByTwo.map(a=>a*2)
+console.log(mapping);
 
 
 /**
@@ -23,7 +25,10 @@ const multiplyByTwo = (array) => {}
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const filterNameStartByA = (array) => {}
+const filterNameStartByA = ["alexis","je","maison","toi","arbre"];
+const filtera= filterNameStartByA.filter(x=>x.startsWith("a"))
+
+console.log(filtera);
 
 /**
  * Utiliser la fonction .reduce sur le tableau passé en paramètre
