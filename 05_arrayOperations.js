@@ -11,7 +11,7 @@
   */
 
 const multiplyByTwo = [1,2,3,4];
-const mapping = multiplyByTwo.map(a=>a*2)
+const mapping = multiplyByTwo.map(a=>a*2) // pour chaque élément du tableau
 console.log(mapping);
 
 
@@ -39,8 +39,15 @@ console.log(filtera);
  *   - les mots clées function et return sont interdits
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
+const array = [1, 2, 3, 4,10];
+//
 
-const sum = (array) => {}
+const sum = array.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  
+);
+
+console.log(sum);
 
 /**
  * Utiliser la fonction .find sur le tableau passé en paramètre
@@ -60,8 +67,17 @@ const sum = (array) => {}
  *   - les mots clées function et return sont interdits
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
+const findUserById = (users, id) => 
+    users.find(user => user.id === id).name;
 
-const findUserById = (array, id) => {}
+const users = [
+    {id: 1, name: 'John'},
+    {id: 2, name: 'Doe'},
+    {id: 3, name: 'Foo'},
+    {id: 4, name: 'Bar'},
+];
+
+console.log(findUserById(users, 3)); 
 
 
 module.exports = {multiplyByTwo, filterNameStartByA, sum, findUserById};
