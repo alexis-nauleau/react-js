@@ -14,12 +14,11 @@
 
 const test=[1, 2, 3];
 
-
-console.log(first, second);
 const extractFirstTwo = (array) => {
-    const [first, second, ...restArray] = test;
-    
+    const [first, second, ...restArray] = array;
+    return restArray;
 }
+console.log(extractFirstTwo(test));
 
 
 
@@ -30,10 +29,14 @@ const extractFirstTwo = (array) => {
  * exemple: [1, 2, 3] => [2, 3]
  */
 const tests=[1, 2, 3];
-const[txo,t,...rest]= tests;
-console.log(rest);
+// const[txo,...rest]= tests;
+// console.log(rest);
 
-
+const extractRest=(blop)=>{
+    const [prems, ...ilrest] = blop;
+    return ilrest;
+}
+console.log(extractRest(tests));
 /**
  * utilisez la décomposition pour extraire le champ "name" de l'objet passé en paramètre
  * retournez le champ "name"
@@ -67,7 +70,14 @@ const personnage = {
  *    - interdiction d'utiliser l'opérateur "." pour accéder au champ "password"
  * 
  */
+const utilisateur={name: "alexis", password: "1234"}
+const removePassword = (array) => {
+    const {password, ...restPass} = array;
+    return restPass;
+};
 
-const removePassword = () => {};
+console.log(removePassword(utilisateur));
+
+
 
 module.exports = {extractFirstTwo, extractRest, extractName, removePassword}
