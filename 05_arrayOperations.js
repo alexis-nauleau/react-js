@@ -11,8 +11,8 @@
   */
 
 const multiplyByTwo = [1,2,3,4];
-const mapping =multiplyByTwo => multiplyByTwo.map(a=>a*2) // pour chaque élément du tableau
-console.log(mapping(multiplyByTwo));
+const mapping =  multiplyByTwo.map(a=>a*2) // pour chaque élément du tableau
+console.log(mapping);
 
 
 /**
@@ -78,4 +78,23 @@ const users = [
 console.log(findUserById(users, 3)); 
 
 
+const arrat=[1,2,3,4,5]
+arrat.forEach(e => {
+  console.console.log((e));
+});
+
+
+const ukers = [
+  { id: 1, name: 'John' },
+  { id: 2, name: 'Jane' },
+  { id: 3, name: 'Alice' },
+  { id: 4, name: 'Bob' },
+  { id: 5, name: 'Eve' },
+];
+
+console.log(ukers.find(e => e.id === 2));
+
+
 module.exports = {multiplyByTwo, filterNameStartByA, sum, findUserById};
+
+// aller voir la fonction .sort
