@@ -11,8 +11,8 @@
   */
 
 const multiplyByTwo = [1,2,3,4];
-const mapping = multiplyByTwo.map(a=>a*2) // pour chaque élément du tableau
-console.log(mapping);
+const mapping =multiplyByTwo => multiplyByTwo.map(a=>a*2) // pour chaque élément du tableau
+console.log(mapping(multiplyByTwo));
 
 
 /**
@@ -25,10 +25,12 @@ console.log(mapping);
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const filterNameStartByA = ["alexis","je","maison","toi","arbre"];
-const filtera= filterNameStartByA.filter(x=>x.startsWith("a"))
+const tabW = ["alexis","je","maison","toi","arbre"];
+const filterNameStartByA =tabW=>tabW.filter(x=>x.startsWith("a"))
 
-console.log(filtera);
+//const sum = array => array.reduce((add, val) => add + val, 0);
+
+console.log(filterNameStartByA(tabW));
 
 /**
  * Utiliser la fonction .reduce sur le tableau passé en paramètre
@@ -42,12 +44,9 @@ console.log(filtera);
 const array = [1, 2, 3, 4,10];
 //
 
-const sum = array.reduce(
-  (add, val) => add + val,
-  
-);
+const sum = array => array.reduce((add, val) => add + val, 0);
 
-console.log(sum);
+console.log(sum(array));
 
 /**
  * Utiliser la fonction .find sur le tableau passé en paramètre
@@ -67,8 +66,7 @@ console.log(sum);
  *   - les mots clées function et return sont interdits
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
-const findUserById = (users, id) => 
-    users.find(user => user.id === id).name;
+const findUserById = (users, id) => users.find(user => user.id === id).name;
 
 const users = [
     {id: 1, name: 'John'},
