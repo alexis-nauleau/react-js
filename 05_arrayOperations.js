@@ -10,9 +10,14 @@
  * 
   */
 
-const multiplyByTwo = [1,2,3,4];
-const mapping =  multiplyByTwo.map(a=>a*2) // pour chaque élément du tableau
-console.log(mapping);
+
+
+
+
+const tab = [1,2,3,4,5,6,7,8,9,10];
+let f = e => e*2
+const multiplyByTwo = tab => tab.map(f) ;
+console.log(multiplyByTwo(tab));
 
 
 /**
@@ -42,7 +47,6 @@ console.log(filterNameStartByA(tabW));
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 const array = [1, 2, 3, 4,10];
-//
 
 const sum = array => array.reduce((add, val) => add + val, 0);
 
