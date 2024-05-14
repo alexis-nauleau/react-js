@@ -80,7 +80,7 @@ console.log(findUserById(users, 3));
 
 const arrat=[1,2,3,4,5]
 arrat.forEach(e => {
-  console.console.log((e));
+  console.log((e));
 });
 
 
