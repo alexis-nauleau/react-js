@@ -30,8 +30,8 @@ console.log(multiplyByTwo(tab));
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const tabW = ["alexis","je","maison","toi","arbre"];
-const filterNameStartByA =tabW=>tabW.filter(x=>x.startsWith("a"))
+const tabW = ["Alexis","je","maison","toi","Arbre"];
+const filterNameStartByA =tabW=>tabW.filter(x=>x.startsWith("A"))
 
 //const sum = array => array.reduce((add, val) => add + val, 0);
 

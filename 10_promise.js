@@ -4,9 +4,15 @@
  * 
  * utilisez new Promise
  */
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+const asynchrone = async()=> {
+    console.log("début");
+    await sleep(2000);
+    console.log("fin");
+}
+asynchrone();
 
-const sleep = () => {
+    
 
-};
 
 module.exports = {sleep};

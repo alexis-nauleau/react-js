@@ -11,8 +11,16 @@
  *    - ne pas utiliser async await
  * 
  */
-const usingThen = (cb) => {
+
+
+const usingThen = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+const synchrone = ()=> {
+    console.log("début");
+    sleep(2000).then((value)=>
+        console.log("fin"));
+    
 }
+synchrone();
 
 /**
  * Créez une fonction asynchrone qui attend 2 seconde puis execute le callback passé en paramètre
