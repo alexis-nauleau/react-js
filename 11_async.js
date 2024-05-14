@@ -15,7 +15,9 @@
 const { sleep } = require("./10_promise");
  
 const usingThen = (cb) => {
+
     sleep(2000).then(cb);
+    
 };
  
 /**
@@ -34,9 +36,11 @@ const usingThen = (cb) => {
  
 const usingAwait = async (cb) => {
     // Attendez que la promesse de sleep soit résolue
+    
     await sleep(2000);
     // Exécutez le callback après le délai
     cb();
+    
 }
  
 /**
